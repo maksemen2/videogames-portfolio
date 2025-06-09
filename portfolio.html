@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио - Game Dev Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header class="hud">
+            <nav class="main-menu">
+                <div class="menu-item" data-page="index">Главная</div>
+                <div class="menu-item active" data-page="portfolio">Портфолио</div>
+                <div class="menu-item" data-page="contacts">Контакты</div>
+            </nav>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <main class="game-content">
+            <section class="level" id="portfolio">
+                <h1 class="game-title">Уровни разработки</h1>
+                
+                <div class="swiper artifact-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide artifact-card">
+                            <div class="artifact-image">
+                                <img src="assets/project1.jpg" alt="E-commerce Platform">
+                                <div class="artifact-level">Уровень 4</div>
+                            </div>
+                            <div class="artifact-info">
+                                <h3>E-commerce Platform</h3>
+                                <div class="artifact-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                </div>
+                                <div class="artifact-stats">
+                                    <div class="stat">
+                                        <span>Производительность</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span>UI/UX</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span>Сложность</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="artifact-description">
+                                    <p>Полнофункциональная платформа электронной коммерции с поддержкой множества платежных систем и интеграцией с популярными маркетплейсами.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide artifact-card">
+                            <div class="artifact-image">
+                                <img src="assets/project2.jpg" alt="Social Network">
+                                <div class="artifact-level">Уровень 5</div>
+                            </div>
+                            <div class="artifact-info">
+                                <h3>Social Network</h3>
+                                <div class="artifact-tech">
+                                    <span class="tech-tag">Next.js</span>
+                                    <span class="tech-tag">GraphQL</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                </div>
+                                <div class="artifact-stats">
+                                    <div class="stat">
+                                        <span>Масштабируемость</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 95%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span>Безопасность</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 88%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span>Сложность</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="artifact-description">
+                                    <p>Социальная сеть с поддержкой чатов, видеозвонков и системой рекомендаций на основе машинного обучения.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide artifact-card">
+                            <div class="artifact-image">
+                                <img src="assets/project3.jpg" alt="Task Manager">
+                                <div class="artifact-level">Уровень 3</div>
+                            </div>
+                            <div class="artifact-info">
+                                <h3>Task Manager</h3>
+                                <div class="artifact-tech">
+                                    <span class="tech-tag">Vue.js</span>
+                                    <span class="tech-tag">Express</span>
+                                    <span class="tech-tag">MySQL</span>
+                                </div>
+                                <div class="artifact-stats">
+                                    <div class="stat">
+                                        <span>Удобство</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 92%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span>Функциональность</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 87%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span>Сложность</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 70%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="artifact-description">
+                                    <p>Система управления задачами с поддержкой команд, временных меток и интеграцией с популярными сервисами.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/swiper.js"></script>
+</body>
+</html> 
