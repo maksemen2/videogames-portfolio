@@ -1,0 +1,226 @@
+:root {
+    --primary-color: #00ff00;
+    --secondary-color: #ff00ff;
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --accent-color: #ffd700;
+    --health-color: #ff3333;
+    --mana-color: #3399ff;
+    --skill-color: #ff9900;
+    --defense-color: #9933ff;
+    --speed-color: #33ff99;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.game-container {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hud {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.menu-item {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    background: var(--primary-color);
+    color: var(--background-color);
+}
+
+.menu-item.active {
+    background: var(--primary-color);
+    color: var(--background-color);
+}
+
+.game-content {
+    padding-top: 80px;
+}
+
+.level {
+    padding: 2rem;
+    min-height: calc(100vh - 80px);
+}
+
+.character-select {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.game-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem auto;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
+    width: 100%;
+    animation: glow 2s infinite;
+}
+
+.character-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.character-avatar {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    overflow: hidden;
+}
+
+.character-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.character-stats {
+    text-align: left;
+}
+
+.quest-log {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    border: 2px solid var(--secondary-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quests {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.quest-item {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.quest-item:hover {
+    background: rgba(0, 255, 0, 0.1);
+    transform: translateX(10px);
+}
+
+.health-bar, .exp-bar {
+    height: 25px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--primary-color);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.health-bar::before, .exp-bar::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: var(--text-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.health-bar .bar-fill, .exp-bar .bar-fill {
+    width: 0%;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.health-bar .bar-fill {
+    background: var(--health-color);
+    box-shadow: 0 0 10px var(--health-color);
+}
+
+.exp-bar .bar-fill {
+    background: var(--mana-color);
+    box-shadow: 0 0 10px var(--mana-color);
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.burger-menu span {
+    width: 30px;
+    height: 3px;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px var(--accent-color); }
+    50% { text-shadow: 0 0 20px var(--accent-color); }
+    100% { text-shadow: 0 0 10px var(--accent-color); }
+}
+
