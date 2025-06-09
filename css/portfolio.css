@@ -1,0 +1,259 @@
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.artifact-swiper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px 80px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.swiper-slide {
+    width: 400px;
+    height: 700px;
+    transition: transform 0.3s;
+}
+
+.artifact-card {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 20px;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: glow 2s infinite;
+}
+
+.artifact-card::before {
+    display: none;
+}
+
+.artifact-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    border: 2px solid var(--secondary-color);
+}
+
+.artifact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.artifact-level {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--accent-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+    font-size: 0.8em;
+    text-shadow: 0 0 5px var(--accent-color);
+}
+
+.artifact-card:hover .artifact-image img {
+    transform: scale(1.1);
+}
+
+.artifact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.artifact-info h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2em;
+    color: var(--accent-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 5px;
+}
+
+.artifact-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.tech-tag {
+    background: rgba(0, 255, 0, 0.1);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.7em;
+    border: 1px solid var(--primary-color);
+    transition: all 0.3s;
+}
+
+.tech-tag:hover {
+    background: var(--primary-color);
+    color: var(--background-color);
+    transform: translateY(-2px);
+}
+
+.artifact-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat span {
+    font-size: 0.8em;
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+.stat-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--primary-color);
+}
+
+.stat-fill {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.artifact-description {
+    margin-top: auto;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+}
+
+.artifact-description p {
+    font-size: 0.8em;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary-color);
+    background: rgba(0, 0, 0, 0.8);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.swiper-button-next {
+    right: 20px;
+}
+
+.swiper-button-prev {
+    left: 20px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: var(--primary-color);
+    color: var(--background-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px;
+}
+
+.swiper-pagination {
+    bottom: 0;
+}
+
+.swiper-pagination-bullet {
+    background: var(--primary-color);
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+.artifact-swiper .swiper-button-next,
+.artifact-swiper .swiper-button-prev {
+    color: var(--primary-color);
+    background: rgba(0, 0, 0, 0.8);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.artifact-swiper .swiper-button-next {
+    right: 20px;
+}
+.artifact-swiper .swiper-button-prev {
+    left: 20px;
+}
+.artifact-swiper .swiper-button-next:hover,
+.artifact-swiper .swiper-button-prev:hover {
+    background: var(--primary-color);
+    color: var(--background-color);
+    transform: translateY(-50%) scale(1.1);
+}
+.artifact-swiper .swiper-button-next:after,
+.artifact-swiper .swiper-button-prev:after {
+    font-size: 20px;
+}
+
+.artifact-swiper .swiper-pagination {
+    bottom: 0;
+}
+.artifact-swiper .swiper-pagination-bullet {
+    background: var(--primary-color);
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+.artifact-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--secondary-color);
+    transform: scale(1.2);
+}
+
