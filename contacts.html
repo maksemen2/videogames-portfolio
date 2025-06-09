@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Game Dev Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header class="hud">
+            <nav class="main-menu">
+                <div class="menu-item" data-page="index">Главная</div>
+                <div class="menu-item" data-page="portfolio">Портфолио</div>
+                <div class="menu-item active" data-page="contacts">Контакты</div>
+            </nav>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <main class="game-content">
+            <section class="level" id="contacts">
+                <h1 class="game-title">Свяжитесь со мной</h1>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <h3>Контактная информация</h3>
+                            <ul class="contact-list">
+                                <li>
+                                    <span class="contact-icon">📧</span>
+                                    <span class="contact-text">email@example.com</span>
+                                </li>
+                                <li>
+                                    <span class="contact-icon">📱</span>
+                                    <span class="contact-text">+7 (999) 123-45-67</span>
+                                </li>
+                                <li>
+                                    <span class="contact-icon">📍</span>
+                                    <span class="contact-text">Москва, Россия</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-link" target="_blank">
+                                <span class="social-icon">GitHub</span>
+                            </a>
+                            <a href="#" class="social-link" target="_blank">
+                                <span class="social-icon">LinkedIn</span>
+                            </a>
+                            <a href="#" class="social-link" target="_blank">
+                                <span class="social-icon">Telegram</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Имя:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение:</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Отправить</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
